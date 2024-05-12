@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.my-tours {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Tours title */
+.my-tours-title {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  top: 30px;
+  left: 175px;
+  z-index: -1;
+}
+
+.my-tours-title h1 {
+  color: #11BACD;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 60px;
+}
+
+/* Tour list */
+.tours-list {
+  position: absolute;
+  top: 115px;
+  left: 180px;
+  width: 1180px;
+  padding: 20px 0;
+  height: 450px;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+
+.tours-list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.tour-img .img-view {
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  width: 185px;
+  height: 99px;
+  cursor: pointer;
+}
+
+.tour-info {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #4E5983;
+  border-bottom: 3px solid #4E5983;
+  padding: 0 50px;
+  margin: 10px 0;
+}
+
+.edit-or-delete,
+.edit-or-delete .delete,
+.edit-or-delete .edit,
+.last-update,
+.tour-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-or-delete .delete:hover {
+  border: 1px solid #FD3535;
+}
+
+.edit-or-delete .edit:hover {
+  border: 1px solid #11BACD;
+}
+
+.last-update span,
+.tour-img span {
+  color: #4E5983;
+}
+
+.edit-or-delete {
+  position: relative;
+}
+ 
+.sure-message {
+  position: absolute;
+  width: 65px;
+  height: 38px;
+  border-radius: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  right: 220px;
+  top: 40px;
+  cursor: pointer;
+  background: rgba(51, 60, 94, 0.6);
+  border: 1px solid #69d3c2;
+  overflow: hidden;
+  color: white;
+  font-size: 19px;
+  transition: 0.8s ease;
+}
+
+.sure-message:hover {
+  border: 1px solid #FD3535;
+  background-color: hsla(0, 0%, 40%, 0.389);
+}
+
+.sure-massege.close {
+  width: 0;
+  opacity: 0;
+}
+
+.edit-or-delete .delete,
+.edit-or-delete .edit {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  position: relative;
+}
+
+.edit-or-delete img {
+  width: 20px;
+}
+
+.edit-or-delete button {
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: rgba(51, 60, 94, 0.6);
+  border: 1px solid #69d3c2;
+  color: #fff;
+  transition: 0.7s ease;
+}
+
+.edit-or-delete button:hover {
+  background-color: hsla(0, 0%, 40%, 0.389);
+}
+
+.tour-button button{
+    display: flex;
+    width: 214px;
+    height: 46px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 12px;
+    background: #69D3C2;
+    border: none;
+    position: absolute;
+    bottom: 40px;
+    left: 680px;
+    transition: .8s ease;
+}
+.tour-button button:hover{
+    transform: scale(1.1);
+    background: hsl(170, 55%, 42%);
+    letter-spacing: .9px;
+}
+
+@media (max-width: 768px) {
+  .my-tours-title {
+    width: 200px;
+    top: 30px;
+    left: 30px;
+  }
+  .my-tours-title h1 {
+    font-size: 40px;
+  }
+  .tours-list {
+    top: 90px;
+    left: 30px;
+    width: 410px;
+    height: 600px;
+    padding: 0px 5px;
+    height: 450px;
+  }
+  .tour-img {
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    margin-left: 15px;
+    padding: 0;
+  }
+  .tour-img span {
+    position: absolute;
+    font-size: 15px;
+    bottom: 12px;
+    left: 10px;
+  }
+  .tour-img .img-view {
+    width: 150px;
+    height: 80px;
+  }
+  .tour-info {
+    padding: 0 3px;
+    position: relative;
+    width: 400px;
+  }
+  .last-update span {
+    font-size: 14px;
+  }
+  .last-update img {
+    width: 15px;
+  }
+  .edit-or-delete {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .edit-or-delete .delete {
+    z-index: 10;
+  }
+  .edit-or-delete .delete span,
+  .edit-or-delete .edit span {
+    display: none;
+  }
+  .edit-or-delete button {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+  }
+  .sure-message {
+    left: -48px;
+    top: 5px;
+    width: 72px;
+    height: 33px;
+    font-size: 15px;
+    justify-content: start;
+    padding-left: 10px;
+  }
+  .sure-message span {
+    width: 150px;
+  }
+  .tour-button button {
+    left: 170px;
+    width: 125px;
+    height: 50px;
+    font-size: 13px;
+    gap: 1px;
+  }
+  .tour-button button img {
+    display: none;
+  }
+}
+
