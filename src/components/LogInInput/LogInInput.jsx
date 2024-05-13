@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./LogInInput.css";
 import password from "../Icons/password.svg";
@@ -8,6 +8,16 @@ import x from "../Icons/x.svg";
 
 function LogInInput() {
   const [rememberMe, setRememberMe] = useState(false);
+
+  useEffect(() => {
+    // Check if there's a remember token in local storage or cookies
+    const rememberToken = localStorage.getItem("rememberToken");
+    if (rememberToken) {
+      // Perform automatic login using the token
+      // You might want to make a request to your backend here
+      console.log("Automatic login with remember token:", rememberToken);
+    }
+  }, []);
 
   const handleRememberMeChange = () => {
     setRememberMe(!rememberMe);
@@ -28,6 +38,12 @@ function LogInInput() {
 
       // Handle successful login response
       console.log("Login successful:", response.data);
+
+      // If Remember Me is checked, save token to local storage or cookies
+      if (rememberMe) {
+        localStorage.setItem("rememberToken", response.data.token);
+        // You can also set an expiry for the token or use cookies with appropriate settings
+      }
     } catch (error) {
       // Handle login error
       console.error("Login error:", error);
