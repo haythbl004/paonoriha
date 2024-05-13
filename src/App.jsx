@@ -1,16 +1,19 @@
+import React from "react";
+import "./App.css";
+import { useState } from "react";
 
-import './App.css';
-import AddNewTour from './components/AddNewTour';
-import LogIn from './components/LogIn';
-import LogInInput from './components/LogInInput/LogInInput';
-import SingIn from './components/SingIn';
-import HomePage from './components/HomePage';
+import HomePage from "./components/HomePage";
+
 function App() {
+
   return (
     <div>
-      <HomePage />
+      
+        <HomePage
+         
+        />
     </div>
   );
 }
 
-export default App
+export default App;
