@@ -4,11 +4,12 @@ import { useState } from "react";
 
 import HomePage from "./components/HomePage";
 import MakeYourTours from "./components/HomePageComponents/MakeYourTours";
+import ErrorMassege from "./components/ErrorMassege";
 
 function App() {
   return (
     <div>
-      <MakeYourTours />
+      <ErrorMassege />
     </div>
   );
 }
