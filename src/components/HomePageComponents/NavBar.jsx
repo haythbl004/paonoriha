@@ -8,10 +8,10 @@ function NavBar({
   sginUp,
   onLogInChange,
   onSignUpChange,
-  onSamplesChange,
   onHomeChange,
   onAboutChange,
-  onTutorialsChange
+  onTutorialsChange,
+  onMyToursChanges
 }) {
 
   return (
