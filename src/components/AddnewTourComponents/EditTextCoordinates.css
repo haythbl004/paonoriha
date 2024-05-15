@@ -44,9 +44,10 @@
 
 .edit-text-container {
   display: flex;
-  width: 1028.8px;
-  padding: 0 15px;
   background-color: white;
+justify-content: center;
+width: 100%;
+align-items: center;
 }
 
 .delete-btn-edit-txt {
@@ -138,7 +139,6 @@
 }
 
 .add-new-text .txt-content {
-  position: absolute;
   background-color: transparent;
   transition: 0.8s ease;
   border: 2px solid #617be5;
@@ -147,9 +147,7 @@
   width: 170px;
   height: 30px;
   padding: 5px;
-  z-index: 100;
   transition: 0.1s ease;
-  top: 36px;
 }
 
 .add-new-text .txt-content:focus {
@@ -157,28 +155,6 @@
   border: 2px solid hsl(228, 72%, 74%);
 }
 
-.add-new-text .txt-content:focus + .labelline {
-  color: #617be5;
-  height: 20px;
-  line-height: 30px;
-  transform: translate(0px, -29px) scale(0.88);
-  z-index: 1000;
-}
-
-.labelline {
-  position: absolute;
-  width: 100px;
-  height: 0px;
-  font-weight: 300;
-  top: 57px;
-  left: 7px;
-  transition: 0.3s ease;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: hsl(0, 0%, 50%);
-}
 
 .Destination-btn-edit-txt:hover {
   background-color: hsl(228, 72%, 54%);

@@ -20,11 +20,12 @@ function App() {
   };
   return (
     <div>
-      {!openMyTours ? (
+      {/* {!openMyTours ? (
         <HomePage onMyToursChange={handleMyToursChange} />
       ) : (
         <MyToursPage onMyToursChange={handleMyToursChange} />
-      )}
+      )} */}
+      <NewHotspot />
     </div>
   );
 }
