@@ -6,6 +6,7 @@ import SingIn from "./SingIn";
 import MyToursPage from "./MyToursPage";
 import AddNewTour from './AddNewTour';
 
+
 function HomePage({ onMyToursChange }) {
   const [logIn, setLogIn] = useState(false);
   const [sginUp, setSginUp] = useState(false);
@@ -65,10 +66,8 @@ function HomePage({ onMyToursChange }) {
         onTutorialsChange={handleTutorialsChange}
         onMyToursChanges={onMyToursChange}
       />
-      {logIn ? <LogIn /> : null}
+      {logIn ? <LogIn onSignUpChange={handleSignUpChange} /> : null}
       {sginUp ? <SingIn /> : null}
-      {samples ? <MyToursPage /> : null}
-      {about ? <AddNewTour /> : null}
     </div>
   );
 }

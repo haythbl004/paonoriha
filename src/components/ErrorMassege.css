@@ -6,9 +6,11 @@
   height: 100px;
   transition: 0.7s ease;
 }
+
 .ErrorMassege.appear {
   transform: translateX(303px);
 }
+
 .error {
   background-color: hsl(0, 72%, 60%);
   width: 330px;
@@ -20,9 +22,11 @@
   border-radius: 10px;
   gap: 5px;
 }
+
 .errormassege.error {
   width: 40px;
 }
+
 .errormassege.cancel {
   position: absolute;
   top: 10px;
@@ -30,6 +34,7 @@
   cursor: pointer;
   width: 10px;
 }
+
 span.errormassege {
   width: 270px;
   display: flex;

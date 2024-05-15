@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect,useState } from "react";
 import "./NavBar.css";
-import img from "../Icons/img.png";
+import logo from "../Icons/logo.svg";
 import Switch from "./Switch";
+import MakeYourTours from './MakeYourTours';
 function NavBar({
   logIn,
   sginUp,
@@ -16,22 +17,28 @@ function NavBar({
 
   return (
     <div className="navbar">
-      <img src={img} alt="Food Lover Logo" />
+      <img src={logo} alt="Logo" />
       <nav>
-        <ul>
-          <li onClick={onHomeChange}>Home</li>
-          <li onClick={onSamplesChange}>Samples</li>
-          <li onClick={onTutorialsChange}>Tutorials</li>
-          <li onClick={onAboutChange}>About</li>
+        <ul className="navBarUL">
+          <li className="navBarLI home" onClick={onHomeChange}>
+            Home
+          </li>
+          <li className="navBarLI" onClick={onTutorialsChange}>
+            Tutorials
+          </li>
+          <li className="navBarLI" onClick={onAboutChange}>
+            About
+          </li>
         </ul>
       </nav>
-      <div className="switch">
-        <Switch
+      <div className="NavBar-YourTours">
+        <MakeYourTours onMyToursChanges={onMyToursChanges} />
+        {/* <Switch
           logIn={logIn}
           sginUp={sginUp}
           onLogInChange={onLogInChange}
           onSignUpChange={onSignUpChange}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
     font-family: Nunito, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -24,7 +22,24 @@
     top: -80px;
 }
 
-.input-login input{
+/* Title styles */
+.login-title {
+    font-size: 60px;
+    z-index: 10000;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    font-family: Poppins;
+    font-weight: 300;
+}
+
+/* input logIn */
+.input-login .input-box{
+    position: relative;
+}
+
+.user-login,
+.password-login{
     position: absolute;
     background: #859cf699;
     height: 44px;
@@ -37,87 +52,88 @@
     z-index: 50;
     width: 250px;
     transition: 0.8s ease;
+    font-family: Nunito, sans-serif;
 }
 
-input.user-login{
-    bottom: 20px;
+.user-login{
+    bottom: 0px;
     border: 2px solid #859cf699;
 }
 
-input.password-login{
+.password-login{
     border: 2px solid #ffec7a;
     padding-right: 110px;
     width: 156px;
+    bottom: -65px;
 }
 
-.input-login .input-box label{
+.user-login:focus{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+}
+
+.password-login:focus{
+    border: 2px solid hsl(51, 100%, 94%);
+}
+
+/* input label logIn */
+.user-login-label,
+.password-login-label{
     position: absolute;
     color: rgba(255, 255, 255, 0.702);
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Nunito, sans-serif;
+    font-weight: 300;
 }
 
-label.user-login{
+.user-login-label{
     width: 120px;
     height: 30px;
-    bottom: 28.5px;
-    left: 45.5px;
+    bottom: 8.5px;
+    left: 10.5px;
     transition: 0.3s ease;
 }
 
-label.password-login{
+.password-login-label{
     height: 30px;
-    top: 10px;
+    top: 26px;
     left: 46.5px;
     transition: 0.3s ease;
 }
 
-.input-login .input-box{
-    position: relative;
+.user-login:focus ~.user-login-label ,
+.user-login:valid ~.user-login-label,
+.password-login:focus ~.password-login-label,
+.password-login:valid ~.password-login-label{
+    transform: translate(-35px,-32px) scale(.8);
 }
 
-.input-login img{
+/* input img logIn */
+.password-login-img,
+.user-login-img{
     position: absolute;
     width: 25px;
 }
 
-img.user-login{
-bottom: 33px;
-left: 15px;
+.user-login-img{
+bottom: 13px;
+left: 13px;
 }
 
-img.password-login{
-    top: 10px;
-    left: 15px;
+.password-login-img{
+    top: 28px;
+    left: 12px;
 }
 
-input.user-login:focus{
-    border: 2px solid rgba(255, 255, 255, 0.702);
-}
-
-input.password-login:focus{
-    border: 2px solid hsl(51, 100%, 94%);
-}
-
-
-input.password-login:focus ~label.password-login,
-input.password-login:valid ~label.password-login{
-    transform: translate(-40px,-30px) scale(.8);
-}
-
-.input.user-login:focus ~label.user-login ,
-input.user-login:valid ~label.user-login{
-    transform: translate(-77px,-30px) scale(.8);
-}
-
-span.password-login{
+/* forget the passwoed span */
+.password-login-span{
     position: absolute;
     font-size: 10px;
     width: 120px;
-    top: 16px;
-    left: 200px;
+    top: 34px;
+    left: 205px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,9 +141,12 @@ span.password-login{
     z-index: 1000;
     color: hsla(0, 0%, 100%, 0.796);
     cursor: pointer;
+    width: 105px;
 }
 
-.remember-me label {
+/* checkbox */
+
+.check {
     color: hsla(0, 0%, 100%, 0.495);
     font-family: Nunito, sans-serif;
     font-size: 14px;
@@ -142,7 +161,7 @@ span.password-login{
 
 .remember-me{
     position: absolute;
-    top: 50px;
+    top: 80px;
     left: 80px;
 }
 
@@ -151,7 +170,7 @@ input[type="checkbox"] {
 }
 
 /* Custom checkbox styles */
-input[type="checkbox"] + label:before {
+input[type="checkbox"] + .check:before {
     border: 1px solid white;
     border-radius: 3px;
     content: "\00a0";
@@ -164,25 +183,17 @@ input[type="checkbox"] + label:before {
     width: 16px;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked + .check:before {
     background: transparent;
     color: white;
     content: "\2713";
     text-align: center;
 }
 
-/* Title styles */
-.login-title {
-    font-size: 50px;
-    margin-top: 10px;
-    z-index: 10000;
-    position: absolute;
-    bottom: 80px;
-    left: 90px;
-}
 
-/* Styles for Google and X buttons */
-.google-or-x-login button {
+
+/* Styles for Google and GitHup buttons */
+.google-githup-btn-login {
     align-items: center;
     background-color: #fff;
     border-radius: 100%;
@@ -195,26 +206,16 @@ input[type="checkbox"]:checked + label:before {
     transition: .5s ease;
 }
 
-/* Container for Google and X buttons */
-.google-or-x-login {
+/* Container for Google and GitHup buttons */
+.google-or-githup-login {
     display: flex;
     gap: 10px;
     position: absolute;
-    top: 160px;
+    top: 140px;
     left: 30px;
 }
 
-/* Styles for Google and X icons */
-.google {
-    width: 27px;
-    height: 27px;
-}
-
-.x {
-    width: 24px;
-    height: 28px;
-}
-
+/* login buttton */
 .btn-login {
     position: absolute;
     right: -60px;
@@ -236,25 +237,30 @@ input[type="checkbox"]:checked + label:before {
 
 /* Hover effect for buttons */
 .btn-login:hover {
-    box-shadow: 0px 6px hsla(0, 0%, 0%, 0.198);
+    box-shadow: 0px 6px hsla(0, 0%, 0%, 0.104);
 }
 
 .or {
     color: hsla(0, 0%, 100%, 0.495);
-    margin: 5px 0;
     position: absolute;
-    top: 110px;
+    top: 100px;
     left: 70px;
+    font-family: Hind Siliguri;
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .go-to-singin{
     position: absolute;
-    top: 200px;
-    left: 10px;
-    font-size: 14px;
+    top: 190px;
+    left: -10px;
+    font-size: 16px;
     cursor: pointer;
     text-decoration: underline;
     color: #69d3c2;
+    width: 200px;
+    font-family: Hind Siliguri;
+    font-weight: 200;
 }
 
 .go-to-singin:hover{

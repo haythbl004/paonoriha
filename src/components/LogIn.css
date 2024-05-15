@@ -1,9 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
     color: white;
 }
-
 
 /* Styles for the login form */
 .login-form {
@@ -23,27 +20,4 @@
     align-items: center;
     justify-content: center;
     height: 450px;
-}
-
-/* Styles for the 'Go to Home' button */
-.go-to-home {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.go-to-home button {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    cursor: pointer;
-    border: none;
-    background-color: #69d3c2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.go-to-home button img {
-    width: 30px;
 }

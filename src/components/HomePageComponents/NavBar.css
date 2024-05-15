@@ -1,40 +1,42 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 600px;
+    gap: 500px;
 }
 
-.navbar nav ul{
+.navBarUL{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-transform: capitalize;
-    margin-right: 250px;
+    margin-right: 200px;
 }
 
-.navbar ul li {
+.navBarLI{
     padding:15px 20px ;
     color: hsl(0, 0%, 40%);
     font-weight: 600;
     cursor: pointer;
 }
 
-.navbar ul li:hover{
+.navBarLI:hover{
     border-bottom:2px solid #5169dd;
 }
 
 .switch{
     position: absolute;
-    right: 80px;
+    right: 150px;
 }
 
-li.home{
+.navBarLI.home{
     color: #5169dd;
+}
+
+.NavBar-YourTours{
+    position: absolute;
+    right: 150px;
 }

@@ -5,7 +5,6 @@
 .MakeYourTours{
     display: inline-block;
     position: relative;
-    top: 200px;
 }
 
 .user-edit-info{
@@ -36,9 +35,9 @@
     left: -1.5px;
 }
 
-.user-edit-info ul{
+.YourToursUL{
     position: absolute;
-    width: 80px;
+    width: 110px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -50,14 +49,14 @@
 }
 
 
-.user-edit-info .user-img ul li{
+.myacaunt,.logout{
     font-size: 10px;
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 79px;
-    height: 25px;
-    padding-left:4px;
+    width: 100px;
+    height: 30px;
+    padding-left:10px;
     gap: 7px;
     color: hsl(0, 0%, 30%);
     letter-spacing: 0.05px;
@@ -66,7 +65,7 @@
     transition: .4s ease;
 }
 
-.user-edit-info .user-img ul li:hover{
+.myacaunt:hover,.logout:hover{
     background-color: hsl(0, 0%, 76%);
 }
 
@@ -74,11 +73,11 @@
 border-bottom:1px solid transparent ;
 }
 
-li.myacaunt img{
+.myacaunt img{
    width: 15px;
 }
 
-li.logout img{
+.logout img{
     width: 14px;
 }
 

@@ -95,11 +95,6 @@
   letter-spacing: -0.8px;
 }
 
-.sebjet-field {
-  resize: none;
-  padding: 10px 10px;
-}
-
 .sebjet-field:focus,
 .title-field:focus {
   border: 2px solid white;
@@ -112,7 +107,8 @@
 }
 
 .sebjet-field {
-  height: 163px;
+  resize: none;
+  padding: 10px 10px;
   margin-top: 22px;
 }
 

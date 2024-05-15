@@ -11,6 +11,8 @@ import Rightside from "./components/AddnewTourComponents/RightSide";
 import AddNewTour from "./components/AddNewTour";
 import EditTextCoordinates from "./components/AddnewTourComponents/EditTextCoordinates";
 import EditDestinationCoordinates from "./components/AddnewTourComponents/EditDestinationCoordinates";
+import NavBar from "./components/HomePageComponents/NavBar";
+import CreateForm from "./components/AddnewTourComponents/CreateForm";
 function App() {
   const [openMyTours, setOpenMytours] = useState(false);
   const handleMyToursChange = () => {
@@ -18,12 +20,11 @@ function App() {
   };
   return (
     <div>
-      <EditDestinationCoordinates />
-      {/* {!openMyTours ? (
+      {!openMyTours ? (
         <HomePage onMyToursChange={handleMyToursChange} />
       ) : (
-        MyToursPage
-      )} */}
+        <MyToursPage onMyToursChange={handleMyToursChange} />
+      )}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import "./SingInInputs.css";
 import passwordicon from "../Icons/password.svg";
 import user from "../Icons/user.svg";
 import email from "../Icons/email.svg";
-import x from "../Icons/x.svg";
+import githup from "../Icons/githup.svg";
 import google from "../Icons/google.svg";
 import axios from "axios";
 function SingInInputs() {
@@ -26,40 +26,40 @@ function SingInInputs() {
     }
   };
   return (
-    <div className="input-singin">
-      <form onSubmit={handleSubmit}>
+    <div className="input-signup">
+      <form onSubmit={handleSubmit} className="sign-up">
         <div className="singin-title">
           <h1 className="sginup">Sign Up</h1>
         </div>
         <div className="input-box">
-          <input type="text" required className="user" name="name" />
-          <label className="user">Full name</label>
-          <img src={user} alt="" className="user" />
+          <input type="text" required className="user-signup" name="name" />
+          <label className="user-signup-label">Full name</label>
+          <img src={user} alt="" className="user-signup-img" />
         </div>
         <div className="input-box">
-          <input type="email" required className="email" name="email" />
-          <label className="email">Email</label>
-          <img src={email} alt="" className="email" />
+          <input type="email" required className="email-signup" name="email" />
+          <label className="email-signup-label">Email</label>
+          <img src={email} alt="" className="email-signup-img" />
         </div>
         <div className="input-box">
           <input
             type="password"
             required
-            className="password"
+            className="password-signup"
             name="password"
           />
-          <label className="password">Password</label>
-          <img src={passwordicon} alt="" className="password" />
+          <label className="password-signup-label">Password</label>
+          <img src={passwordicon} alt="" className="password-signup-img" />
         </div>
         <div className="input-box">
           <input
             type="password"
             required
-            className="conferm"
+            className="confirm-signup"
             name="passwordConfirm"
           />
-          <label className="conferm">Conferm the password</label>
-          <img src={passwordicon} alt="" className="conferm" />
+          <label className="confirm-signup-label">Conferm the password</label>
+          <img src={passwordicon} alt="" className="confirm-signup-img" />
         </div>
         <button className="btn-singin" type="submit">
           Sign up
@@ -68,12 +68,12 @@ function SingInInputs() {
           <p className="by">By registring you accept</p>
           <p className="trems">Terms of Service</p>
         </div>
-        <div className="google-or-x">
-          <button>
+        <div className="google-or-githup-signup">
+          <button className="googlr-githup-btn-signup">
             <img src={google} alt="" className="google" />
           </button>
-          <button>
-            <img src={x} alt="" className="x" />
+          <button className="googlr-githup-btn-signup">
+            <img src={githup} alt="" className="githup" />
           </button>
         </div>
       </form>

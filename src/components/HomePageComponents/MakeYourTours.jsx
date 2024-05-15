@@ -4,7 +4,7 @@ import user from "../Icons/user2.svg";
 import cat from "../Icons/cat.svg";
 import exit from "../Icons/exit.svg";
 
-function MakeYourTours() {
+function MakeYourTours({ onMyToursChanges }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ function MakeYourTours() {
         >
           <img src={cat} alt="" className="user-profile" />
           {isHovered && (
-            <ul className="user">
+            <ul className="YourToursUL">
               <li className="myacaunt">
                 <img src={user} alt="" />
                 My account
@@ -31,7 +31,9 @@ function MakeYourTours() {
         </div>
       </div>
       <div className="go-to-your-tour">
-        <button>Your Tours</button>
+        <button onClick={onMyToursChanges} className="gotoyourtourbtn">
+          Your Tours
+        </button>
       </div>
     </div>
   );

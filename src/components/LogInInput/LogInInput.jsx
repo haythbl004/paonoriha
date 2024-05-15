@@ -4,9 +4,9 @@ import "./LogInInput.css";
 import password from "../Icons/password.svg";
 import user from "../Icons/user.svg";
 import google from "../Icons/google.svg";
-import x from "../Icons/x.svg";
+import githup from "../Icons/githup.svg";
 
-function LogInInput() {
+function LogInInput({ onSignUpChange }) {
   const [rememberMe, setRememberMe] = useState(false);
 
   useEffect(() => {
@@ -56,8 +56,8 @@ function LogInInput() {
         <h1 className="login-title">Login</h1>
         <div className="input-box">
           <input type="email" required className="user-login" name="email" />
-          <label className="user-login">Email </label>
-          <img src={user} alt="" className="user-login" />
+          <label className="user-login-label">Email </label>
+          <img src={user} alt="" className="user-login-img" />
         </div>
         <div className="input-box">
           <input
@@ -66,9 +66,9 @@ function LogInInput() {
             className="password-login"
             name="password"
           />
-          <label className="password-login">Password</label>
-          <img src={password} alt="" className="password-login" />
-          <span className="password-login">I forgot my password</span>
+          <label className="password-login-label">Password</label>
+          <img src={password} alt="" className="password-login-img" />
+          <span className="password-login-span">I forgot my password</span>
         </div>
         <div className="remember-me">
           <input
@@ -85,15 +85,17 @@ function LogInInput() {
             Login
           </button>
           <p className="or">or</p>
-          <div className="google-or-x-login">
-            <button>
+          <div className="google-or-githup-login">
+            <button className="google-githup-btn-login">
               <img src={google} alt="" className="google" />
             </button>
-            <button>
-              <img src={x} alt="" className="x" />
+            <button className="google-githup-btn-login">
+              <img src={githup} alt="" className="githup" />
             </button>
           </div>
-          <p className="go-to-singin">I don't have an account yet</p>
+          <p className="go-to-singin" onClick={onSignUpChange}>
+            I don't have an account yet
+          </p>
         </div>
       </form>
     </div>
