@@ -85,18 +85,32 @@
 
 /* tour-form-img */
 .tour-form-view {
-  width: 558px;
+  width: 598px;
   padding: 5px;
+  height: 230px;
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   column-gap: 12px;
-  row-gap: 12px;
+  overflow-y: scroll;
+}
+
+.tour-form-view::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tour-form-view::-webkit-scrollbar-track {
+  background: #d9d9d9;
+}
+
+.tour-form-view::-webkit-scrollbar-thumb {
+  background-color: #69d3c2;
 }
 
 .tour-form-img {
   position: relative;
+  margin-top: 10px;
   width: 127px;
   height: 127px;
 }
@@ -140,11 +154,11 @@
   line-height: normal;
   letter-spacing: -0.8px;
   cursor: pointer;
-  transition: .4s ease;
+  transition: 0.4s ease;
 }
 
-.create-form-button{
-    margin: 15px 0;
+.create-form-button {
+  margin: 15px 0;
 }
 
 .create-form-buttons.newSence {
@@ -162,14 +176,14 @@
 }
 
 .create-form-buttons.next:hover,
-.create-form-buttons.newSence:hover{
-    transform: scale(1.1);
+.create-form-buttons.newSence:hover {
+  transform: scale(1.1);
 }
 
-.create-form-buttons.newSence:hover{
-    background-color: hsl(186, 90%, 42%);
+.create-form-buttons.newSence:hover {
+  background-color: hsl(186, 90%, 42%);
 }
 
-.create-form-buttons.next:hover{
-    background-color: hsl(186, 85%, 54%);
+.create-form-buttons.next:hover {
+  background-color: hsl(186, 85%, 54%);
 }

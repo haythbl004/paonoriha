@@ -4,15 +4,16 @@ import { useState } from "react";
 
 import HomePage from "./components/HomePage";
 import MyToursPage from "./components/MyToursPage";
-import NewInfoPoint from "./components/AddnewTourComponents/NewInfoPoint";
-import NewHotspot from "./components/AddnewTourComponents/NewHotspot";
-import LeftSide from "./components/AddnewTourComponents/LeftSide";
-import Rightside from "./components/AddnewTourComponents/RightSide";
-import AddNewTour from "./components/AddNewTour";
-import EditTextCoordinates from "./components/AddnewTourComponents/EditTextCoordinates";
-import EditDestinationCoordinates from "./components/AddnewTourComponents/EditDestinationCoordinates";
+import NewInfoPoint from "./components/AdminComponents/NewInfoPoint";
+import NewHotspot from "./components/AdminComponents/NewHotspot";
+import LeftSide from "./components/AdminComponents/LeftSide";
+import Rightside from "./components/AdminComponents/RightSide";
+import Admin from "./components/Admin";
+import EditTextCoordinates from "./components/AdminComponents/EditTextCoordinates";
+import EditDestinationCoordinates from "./components/AdminComponents/EditDestinationCoordinates";
 import NavBar from "./components/HomePageComponents/NavBar";
-import CreateForm from "./components/AddnewTourComponents/CreateForm";
+import CreateForm from "./components/AdminComponents/CreateForm";
+import MakeYourTours from "./components/HomePageComponents/MakeYourTours";
 function App() {
   const [openMyTours, setOpenMytours] = useState(false);
   const handleMyToursChange = () => {
@@ -25,7 +26,7 @@ function App() {
       ) : (
         <MyToursPage onMyToursChange={handleMyToursChange} />
       )} */}
-      <NewHotspot />
+      <MyToursPage />
     </div>
   );
 }

@@ -11,10 +11,6 @@ function EditTextCoordinates() {
           <span className="span-location-delete">Delete</span>
           <img src={trach} alt="Trash" className="delete-btn-edit-txt-icon" />
         </button>
-        <button className="Destination-btn-edit-txt">
-          <span className="span-location-delete">Add New Text</span>
-          <img src={add} alt="Add" className="Destination-btn-edit-txt-icon" />
-        </button>
       </div>
       <div className="edit-text-buttons">
         <div className="coordinate-buttons">

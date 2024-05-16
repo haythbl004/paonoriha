@@ -4,8 +4,7 @@ import NavBar from "./HomePageComponents/NavBar";
 import LogIn from "./LogIn";
 import SingIn from "./SingIn";
 import MyToursPage from "./MyToursPage";
-import AddNewTour from './AddNewTour';
-
+import AddNewTour from "./Admin";
 
 function HomePage({ onMyToursChange }) {
   const [logIn, setLogIn] = useState(false);
